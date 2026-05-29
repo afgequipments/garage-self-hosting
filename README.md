@@ -79,6 +79,3 @@ inilah alasan mengapa garage sangat cocok untuk self-hosting dengan infrastruktu
 - bagaimana melakukan konfigurasi cluster?
 
 - apakah gateway perlu di konfigurasi atau ini akan otomatis tanpa perlu konfigurasi?
-
-- 
-

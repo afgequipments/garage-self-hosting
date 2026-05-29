@@ -23,8 +23,12 @@ rpc_public_addr = "127.0.0.1:3901"
 rpc_secret = "....."
 
 [s3_api]
+# nama daerah virtual yang menggambarkan lokasi server saat ini. 
+# kamu bisa merubah ini sesuai keinginan, contoh: bws-1, jbr-1, jbr-2 
 s3_region = "garage"
+# menerima semua permintaan dari luar melalui port 3900
 api_bind_addr = "[::]:3900"
+# ganti sesuai domain yang digunakan
 root_domain = ".s3.garage.localhost"
 
 [s3_web]
