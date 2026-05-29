@@ -53,7 +53,7 @@ metadata_dir = "/var/lib/garage/meta"
 data_dir = "/var/lib/garage/data"
 
 # mode single node
-replication_mode = "none"
+replication_factor = 1
 
 # konfigurasi komunikasi antar node (RPC)
 rpc_bind_addr = "[::]:3901"
@@ -109,4 +109,9 @@ sudo systemctl status garage
 garage status
 ```
 
-*bersambung...*
+## Install Web UI
+- https://github.com/khairul169/garage-webui
+- https://github.com/Noooste/garage-ui
+    - https://blog-ocampoge.medium.com/garage-the-minimalist-distributed-object-store-your-lightweight-s3-alternative-b7ca8be162b0
+- https://github.com/datahub-local/garage-helm/tree/main
+- https://github.com/eyebrowkang/garage-admin-console/tree/main
