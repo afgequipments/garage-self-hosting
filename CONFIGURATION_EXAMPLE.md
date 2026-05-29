@@ -27,17 +27,28 @@ rpc_secret = "....."
 # kamu bisa merubah ini sesuai keinginan, contoh: bws-1, jbr-1, jbr-2 
 s3_region = "garage"
 # menerima semua permintaan dari luar melalui port 3900
+# samakan nilainya jika ini berada pada cluster yang sama
 api_bind_addr = "[::]:3900"
 # ganti sesuai domain yang digunakan
+# samakan nilainya jika ini berada pada cluster yang sama
 root_domain = ".s3.garage.localhost"
 
 [s3_web]
+# membuka port 3902 di OS untuk menerima koneksi HTTP web browser biasa
+# cocok dijadikan sebagai hosting website static
 bind_addr = "[::]:3902"
+# domain utama khusus untuk web hosting
+# jika bucket Anda bernama "katalog", maka URL webnya menjadi katalog.web.garage.localhost
 root_domain = ".web.garage.localhost"
+# file default yang akan otomatis dieksekusi saat pengunjung membuka URL root (tanpa menyebut nama file spesifik)
 index = "index.html"
 
 [admin]
 api_bind_addr = "[::]:3903"
-admin_token = "$(openssl rand -base64 32)"
-metrics_token = "$(openssl rand -base64 32)"
+# openssl rand -base64 32
+# jalankan untuk membuat admin_token. pastikan semua node dalam cluster yang sama memiliki admin_token yang sama juga
+admin_token = "......."
+# openssl rand -base64 32
+# jalankan untuk membuat admin_token. pastikan semua node dalam cluster yang sama memiliki admin_token yang sama juga
+metrics_token = "......"
 ```
